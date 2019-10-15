@@ -1,21 +1,21 @@
 package com.lmtAPI.lmt.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
-public class User {
-
+public class User implements Serializable {
+    private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue
-    int id;
+    long id;
     String name;
-    String prenom;
+    @Column(name = "email", insertable=true, updatable = true, nullable=false)
     String email;
     String password;
     String urlPhoto;
     String userIdFirebase;
+    String prenom;
 
     public String getPrenom() {
         return prenom;
@@ -57,7 +57,7 @@ public class User {
         this.userIdFirebase = userIdFirebase;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
