@@ -16,7 +16,7 @@ import java.util.Set;
 @Data
 @Entity
 public class Maraude extends Evenement implements Serializable{
-    String date;
+    public String date;
     String duree;
     String commentaire;
     int participantMax;

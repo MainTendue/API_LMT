@@ -10,8 +10,7 @@ import java.io.Serializable;
 
 @Data
 @Entity
-public class ReponseAuxBesoins extends BaseEntity implements Serializable {
-
+public class BesoinUsers extends BaseEntity implements Serializable {
     int quantite;
 
     String dateReponse;
@@ -23,6 +22,5 @@ public class ReponseAuxBesoins extends BaseEntity implements Serializable {
     @ManyToOne(fetch= FetchType.EAGER)
     @RestResource(exported = false)
     User user;
-
 
 }

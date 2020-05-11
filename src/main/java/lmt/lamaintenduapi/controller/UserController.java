@@ -47,7 +47,7 @@ public class UserController implements ResourceAssembler<User, Resource<User>> {
     @GetMapping(path = "/addUserIdParticipateInMaraudeId")
     public ResponseEntity<Resource<MaraudeUsers>> addUserAndMaraudeForParticipation(@RequestParam(value = "userId") int idUser, @RequestParam(value = "maraudeId") int idMaraude, @RequestParam(value = "participate") boolean participate){
 
-       MaraudeUsers maraudeUsers = new MaraudeUsers(idUser, idMaraude, participate);
+       MaraudeUsers maraudeUsers = new MaraudeUsers(idUser, idMaraude, participate, true);
 
         maraudeUsers = maraudeUsersRepository.save(maraudeUsers);
 

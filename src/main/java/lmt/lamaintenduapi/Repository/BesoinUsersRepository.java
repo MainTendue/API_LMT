@@ -1,10 +1,9 @@
 package lmt.lamaintenduapi.Repository;
 
-import lmt.lamaintenduapi.model.ReponseAuxBesoins;
+import lmt.lamaintenduapi.model.BesoinUsers;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
-
 @CrossOrigin(maxAge = 3600)
-public interface ReponseAuxBesoinsRepository extends CrudRepository<ReponseAuxBesoins, Integer> {
+public interface BesoinUsersRepository extends CrudRepository<BesoinUsers, Integer> {
 }

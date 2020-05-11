@@ -24,9 +24,18 @@ public class MaraudeUsers extends BaseEntity implements Serializable {
 
     boolean vehicule;
 
-   public MaraudeUsers(int idUser, int idMaraude, boolean participate){
+   public MaraudeUsers(int idUser, int idMaraude, boolean participate, boolean vehicule){
         this.user.id = idUser;
         this.maraude.id = idMaraude;
         this.participate = participate;
+        this.vehicule = vehicule;
     }
+
+    public MaraudeUsers(User user, Maraude maraude, boolean participate, boolean vehicule){
+       this.user = user;
+        this.maraude = maraude;
+        this.participate = participate;
+        this.vehicule = vehicule;
+    }
+    public MaraudeUsers(){}
 }
